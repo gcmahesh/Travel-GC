@@ -24,10 +24,9 @@ html {
 body {
   font-family: 'Poppins', 'Noto Sans JP', sans-serif;
   color: var(--text-main);
-  background-color: var(--bg-light);
+  background-color: #dfebf0;
   line-height: 1.6;
   overflow-x: hidden;
-  background-color: #dfebf0;
 }
 
 /* --- Header / Navbar --- */
@@ -626,6 +625,7 @@ body {
     margin-left: 2.5rem;
   }
 }
+
 /* --- Modern Enhancements & Smooth Animations --- */
 .card {
   transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -667,7 +667,8 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary-hover);
 }
-/* --- Review Section Style --- */
+
+/* --- Review Section & Reviewer Layout Style --- */
 .reviews-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -683,7 +684,6 @@ body {
   transition: var(--transition);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .review-card:hover {
@@ -691,38 +691,62 @@ body {
   box-shadow: var(--shadow-hover);
 }
 
-.review-stars {
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-}
-
-.review-card p {
-  font-size: 0.95rem;
-  color: var(--text-main);
-  font-style: italic;
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-
-.review-author {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--primary-color);
-  text-align: right;
-}
-/* --- Circular Reviewer Avatar Style --- */
-.reviewer-header {
+/* --- Reviewer Vertical Alignment Style --- */
+.reviewer-container {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .reviewer-avatar {
   width: 50px;
   height: 50px;
-  border-radius: 50%; /* तस्बिरलाई पूर्ण रूपमा गोलो (Circle) बनाउँछ */
-  object-fit: cover;  /* तस्बिर बिग्रन वा तнकिन दिँदैन */
+  border-radius: 50%; /* तस्बिरलाई गोलो बनाउँछ */
+  object-fit: cover;
   border: 2px solid var(--primary-color);
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem; /* नाम र स्टार्सको बीचको दूरी */
+}
+
+.review-author {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-align: left;
+}
+
+.review-stars {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+/* Card layout adjustment */
+.review-card {
+  background: var(--white);
+  padding: 1.6rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.review-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0;
 }
