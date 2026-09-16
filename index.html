@@ -1,9 +1,362 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>清水・駿河湾クルーズ日帰り旅行</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shimizu Travel Guide | 清水観光ガイド</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">🌊 Discover Shimizu</a>
+      
+      <div class="nav-right">
+        <div class="lang-switch">
+          <button id="langJa" class="lang-btn active">JP</button>
+          <span>/</span>
+          <button id="langEn" class="lang-btn">EN</button>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-icon">&#9776;</label>
+
+        <nav class="nav-links">
+          <a href="#spots" data-ja="観光スポット" data-en="Sightseeing">観光スポット</a>
+          <a href="#food" data-ja="グルメ＆文化" data-en="Gourmet & Culture">グルメ＆文化</a>
+          <a href="#itinerary" data-ja="モデルコース" data-en="Model Course">モデルコース</a>
+          <a href="#access" data-ja="アクセス" data-en="Access">アクセス</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="badge" data-ja="静岡県 静岡市清水区" data-en="Shizuoka, Japan">静岡県 静岡市清水区</span>
+      <h1 data-ja="富士山と海の絶景、清水へようこそ" data-en="Welcome to Shimizu: Mt. Fuji & Port Views">富士山と海の絶景、清水へようこそ</h1>
+      <p data-ja="富士山、新鮮な海の幸、歴史ある港町の魅力を体感しよう。" data-en="Experience stunning Mt. Fuji vistas, fresh local seafood, and charming marine culture.">富士山、新鮮な海の幸、歴史ある港町の魅力を体感しよう。</p>
+      <div class="hero-buttons">
+        <a href="#spots" class="btn btn-primary" data-ja="スポットを見る" data-en="Explore Spots">スポットを見る</a>
+        <a href="#access" class="btn btn-outline" data-ja="アクセス情報" data-en="Access Info">アクセス情報</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+
+    <!-- Sightseeing Spots -->
+    <section id="spots" class="section">
+      <div class="section-title">
+        <h2 data-ja="人気観光スポット" data-en="Popular Sightseeing Spots">人気観光スポット</h2>
+        <p data-ja="カードをクリックすると詳しい説明と写真が開きます" data-en="Click any card to view detailed photo and information">カードをクリックすると詳しい説明と写真が開きます</p>
+      </div>
+
+      <div class="spots-grid-2x2">
+        <article class="card spot-clickable"
+          data-title-ja="三保松原と富士山"
+          data-title-en="Miho no Matsubara & Mt. Fuji"
+          data-img="Image/fuji.jpg"
+          data-desc-ja="ユネスコ世界文化遺産の構成資産。約5kmに及ぶ海岸線に約3万本の松林が広がり、海越しにそびえる雄大な富士山の景色は圧巻です。"
+          data-desc-en="A UNESCO World Heritage constituent site with over 30,000 pine trees along the coast, offering stunning views of Mt. Fuji over the ocean."
+          data-meta-ja="📍 静岡市清水区三保 | 🎟️ 入場無料"
+          data-meta-en="📍 Miho, Shimizu-ku | 🎟️ Free Admission">
+          <div class="card-img-wrap">
+            <img src="Image/fuji.jpg" alt="Mt. Fuji View" loading="lazy">
+            <span class="tag" data-ja="絶景名所" data-en="Scenic View">絶景名所</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="三保松原と富士山" data-en="Miho no Matsubara">三保松原と富士山</h3>
+            <p data-ja="松林、青い海、雄大な富士山が調和する日本新三景の絶景。" data-en="Quintessential landscape blending green pines, blue waters, and Mt. Fuji.">松林、青い海、雄大な富士山が調和する日本新三景の絶景。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+
+        <article class="card spot-clickable"
+          data-title-ja="エスパルスドリームプラザ"
+          data-title-en="S-Pulse Dream Plaza"
+          data-img="Image/dream-plaza.jpg"
+          data-desc-ja="清水港のベイエリアに位置する大型複合施設。すし横丁やちびまる子ちゃんランド、大観覧車「ドリームスカイ」、映画館など多彩な魅力が集結しています。"
+          data-desc-en="A lively waterfront mall complete with dining options, souvenir shops, cinema, and a giant Ferris wheel overlooking the bay."
+          data-meta-ja="🕒 10:00 - 20:00 | 📍 清水港ウォーターフロント"
+          data-meta-en="🕒 10:00 - 20:00 | 📍 Shimizu Waterfront">
+          <div class="card-img-wrap">
+            <img src="Image/dream-plaza.jpg" alt="S-Pulse Dream Plaza" loading="lazy">
+            <span class="tag" data-ja="ショッピング" data-en="Shopping & Fun">ショッピング</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="エスパルスドリームプラザ" data-en="S-Pulse Dream Plaza">エスパルスドリームプラザ</h3>
+            <p data-ja="観覧車、グルメ横丁、映画館、お土産が揃う海辺のエンタメ施設。" data-en="Entertainment complex featuring seaside dining, cinema, and observation wheel.">観覧車、グルメ横丁、映画館、お土産が揃う海辺のエンタメ施設。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+
+        <article class="card spot-clickable"
+          data-title-ja="清水港ベイクルーズ"
+          data-title-en="Shimizu Bay Cruise"
+          data-img="Image/cruise.jpg"
+          data-desc-ja="穏やかな内海を行き交う観光遊覧船。海上からしか見られない迫力ある富士山や巨大なコンテナ船を爽快な風とともに楽しめます。"
+          data-desc-en="Sightseeing bay cruise providing clear ocean vistas of Mt. Fuji, deep harbor docks, and gentle marine breezes."
+          data-meta-ja="⏱️ 周遊約35〜45分 | ⚓ ドリームプラザ前発着"
+          data-meta-en="⏱️ Approx. 35-45 mins | ⚓ Dream Plaza Pier">
+          <div class="card-img-wrap">
+            <img src="Image/cruise.jpg" alt="Shimizu Cruise" loading="lazy">
+            <span class="tag" data-ja="クルーズ" data-en="Cruise">クルーズ</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="清水港ベイクルーズ" data-en="Shimizu Bay Cruise">清水港ベイクルーズ</h3>
+            <p data-ja="船上デッキから海越しの富士山と港のパノラマを堪能できるクルーズ。" data-en="Relaxing deck voyage showcasing dynamic views of the bay and Mt. Fuji.">船上デッキから海越しの富士山と港のパノラマを堪能できるクルーズ。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+
+        <article class="card spot-clickable"
+          data-title-ja="清水マリーナ・ベイエリア"
+          data-title-en="Shimizu Marina & Promenade"
+          data-img="Image/marina.jpg"
+          data-desc-ja="白いヨットが停泊する爽やかなハーバー。ウッドデッキの遊歩道が続いており、夕暮れ時には水面がオレンジ色に染まります。"
+          data-desc-en="An open harbor lined with yachts and wooden promenades. Ideal for sunset walks along the water."
+          data-meta-ja="🌅 夕暮れ時がおすすめ | 🚶 散策自由"
+          data-meta-en="🌅 Best at sunset | 🚶 Free Walkway">
+          <div class="card-img-wrap">
+            <img src="Image/marina.jpg" alt="Shimizu Marina" loading="lazy">
+            <span class="tag" data-ja="ハーバー" data-en="Harbor">ハーバー</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="清水マリーナ・ベイエリア" data-en="Shimizu Marina">清水マリーナ・ベイエリア</h3>
+            <p data-ja="ヨットが並ぶ港の遊歩道。心地よい海風を感じるリゾート空間。" data-en="Scenic deck promenade filled with ocean breeze and yacht views.">ヨットが並ぶ港の遊歩道。心地よい海風を感じるリゾート空間。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Gourmet & Culture -->
+    <section id="food" class="section">
+      <div class="section-title">
+        <h2 data-ja="グルメ＆カルチャー" data-en="Gourmet & Culture">グルメ＆カルチャー</h2>
+        <p data-ja="カードをクリックすると詳しい説明と写真が開きます" data-en="Click any card to view detailed photo and information">カードをクリックすると詳しい説明と写真が開きます</p>
+      </div>
+
+      <div class="spots-grid-2x2">
+        <article class="card spot-clickable"
+          data-title-ja="エスパルスドリームプラザの多彩なグルメ＆スイーツ"
+          data-title-en="Diverse Dining & Sweets at S-Pulse Dream Plaza"
+          data-img="Image/food.webp"
+          data-desc-ja="駿河湾名物の桜えびやかき揚げ、生しらす丼はもちろん、うどん・ラーメン・定食・パスタ、昔懐かしい学校給食まで勢揃い！静岡特産の抹茶ソフトクリームも大人気です。"
+          data-desc-en="Savor Suruga Bay's famous sakura shrimp, whitebait bowls, ramen, set meals, pasta, and nostalgic school lunches, followed by Shizuoka matcha soft-serve ice cream."
+          data-meta-ja="🦐 桜えび・しらす・麺類・定食 | 🍦 抹茶スイーツ"
+          data-meta-en="🦐 Sakura Shrimp, Noodles, Sets | 🍦 Matcha Sweets">
+          <div class="card-img-wrap">
+            <img src="Image/food.webp" alt="Dream Plaza Gourmet" loading="lazy">
+            <span class="tag tag-orange" data-ja="多彩なグルメ" data-en="Local Gourmet">多彩なグルメ</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="エスパルスドリームプラザの多彩なグルメ" data-en="Diverse Dining at Dream Plaza">エスパルスドリームプラザの多彩なグルメ</h3>
+            <p data-ja="桜えびやかき揚げ、麺類、定食から静岡抹茶スイーツまで何でも揃うグルメスポット。" data-en="A lively food haven offering everything from sakura shrimp and noodles to matcha desserts.">桜えびやかき揚げ、麺類、定食から静岡抹茶スイーツまで何でも揃うグルメスポット。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+
+        <article class="card spot-clickable"
+          data-title-ja="ちびまる子ちゃんランド"
+          data-title-en="Chibi Maruko-chan Land"
+          data-img="Image/maruko.jpg"
+          data-desc-ja="清水区出身のさくらももこ先生の人気作品『ちびまる子ちゃん』のミュージアム。アニメの教室やさくら家が忠実に再現されています。"
+          data-desc-en="The world's only permanent museum dedicated to Chibi Maruko-chan, recreating classrooms and living spaces from the beloved anime."
+          data-meta-ja="📍 ドリームプラザ 3F | 🕒 10:00 - 20:00"
+          data-meta-en="📍 Dream Plaza 3F | 🕒 10:00 - 20:00">
+          <div class="card-img-wrap">
+            <img src="Image/maruko.jpg" alt="Chibi Maruko-chan Land" loading="lazy">
+            <span class="tag tag-pink" data-ja="カルチャー" data-en="Culture">カルチャー</span>
+            <div class="click-hint" data-ja="🔍 詳細を見る" data-en="🔍 View Details">🔍 詳細を見る</div>
+          </div>
+          <div class="card-body">
+            <h3 data-ja="ちびまる子ちゃんランド" data-en="Chibi Maruko-chan Land">ちびまる子ちゃんランド</h3>
+            <p data-ja="名作アニメの世界観に浸れる、清水ならではの人気ミュージアム。" data-en="Step right inside the charming world and school days of Maruko-chan.">名作アニメの世界観に浸れる、清水ならではの人気ミュージアム。</p>
+            <div class="card-footer-btn" data-ja="クリックして詳細表示 →" data-en="Click for details →">クリックして詳細表示 →</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 1-Day Model Course -->
+    <section id="itinerary" class="section">
+      <div class="section-title">
+        <h2 data-ja="清水満喫！1日おすすめコース" data-en="1-Day Recommended Model Course">清水満喫！1日おすすめコース</h2>
+        <p data-ja="清水の見どころを効率よく巡る日帰り観光プラン" data-en="A perfect full-day sightseeing itinerary to discover Shimizu">清水の見どころを効率よく巡る日帰り観光プラン</p>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-content">
+            <h4 data-ja="三保松原で富士山観賞" data-en="Scenic Mt. Fuji Views at Miho">三保松原で富士山観賞</h4>
+            <p data-ja="朝の澄んだ空気の中で、青い海と富士山をバックに記念撮影。" data-en="Capture iconic Mt. Fuji vistas along the pine-lined beach.">朝の澄んだ空気の中で、青い海と富士山をバックに記念撮影。</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-content">
+            <h4 data-ja="ドリームプラザで海鮮・ご当地ランチ" data-en="Seafood Lunch at Dream Plaza">ドリームプラザで海鮮・ご当地ランチ</h4>
+            <p data-ja="駿河湾名物の桜えび、生しらす丼や定食をお腹いっぱい堪能。" data-en="Enjoy fresh sakura shrimp, whitebait bowls, and local lunch sets.">駿河湾名物の桜えび、生しらす丼や定食をお腹いっぱい堪能。</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">14:30</div>
+          <div class="timeline-content">
+            <h4 data-ja="ちびまる子ちゃんランド＆クルーズ" data-en="Chibi Maruko Land & Bay Cruise">ちびまる子ちゃんランド＆クルーズ</h4>
+            <p data-ja="アニメの世界を体験した後は、遊覧船に乗って爽快な海上散歩へ。" data-en="Explore the museum, then embark on a refreshing bay cruise.">アニメの世界を体験した後は、遊覧船に乗って爽快な海上散歩へ。</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-content">
+            <h4 data-ja="マリーナで夕暮れ散歩" data-en="Sunset Walk at Shimizu Marina">マリーナで夕暮れ散歩</h4>
+            <p data-ja="夕日に染まるヨットハーバーを眺めながらゆったり旅を締めくくり。" data-en="Unwind along the boardwalk watching the golden sunset over the harbor.">夕日に染まるヨットハーバーを眺めながらゆったり旅を締めくくり。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Access Section -->
+    <section id="access" class="section">
+      <div class="section-title">
+        <h2 data-ja="アクセス案内" data-en="Access & Map">アクセス案内</h2>
+        <p data-ja="主要交通機関からのアクセス情報" data-en="Transportation guide and area location map">主要交通機関からのアクセス情報</p>
+      </div>
+
+      <div class="access-wrapper">
+        <div class="access-info">
+          <h3 data-ja="交通案内" data-en="Transportation">交通案内</h3>
+          <ul>
+            <li><strong data-ja="電車:" data-en="Train:">電車:</strong> <span data-ja="JR東海道線「清水駅」または静岡鉄道「新清水駅」" data-en="JR Tokaido Line Shimizu Station or Shizutetsu Shin-Shimizu Station">JR東海道線「清水駅」または静岡鉄道「新清水駅」</span></li>
+            <li><strong data-ja="シャトルバス:" data-en="Shuttle Bus:">シャトルバス:</strong> <span data-ja="JR清水駅東口より無料シャトルバス運行中" data-en="Free shuttle bus available from JR Shimizu Station East Exit">JR清水駅東口より無料シャトルバス運行中</span></li>
+            <li><strong data-ja="車:" data-en="By Car:">車:</strong> <span data-ja="東名高速道路「清水IC」より約10〜15分" data-en="Approx. 10-15 mins from Tomei Expressway Shimizu IC">東名高速道路「清水IC」より約10〜15分</span></li>
+          </ul>
+          <div class="access-static-img">
+            <p class="img-label" data-ja="ルート案内図:" data-en="Route Guide Map:">ルート案内図:</p>
+            <img src="Image/access.jpg" alt="Access Route Map" loading="lazy">
+          </div>
+        </div>
+
+        <div class="access-map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13064.97495034604!2d138.48705359400874!3d35.01309855523091!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601a3556ae5e7143%3A0xb3551528c1199ce5!2sS-Pulse%20Dream%20Plaza!5e0!3m2!1sen!2sjp!4v1700000000000!5m2!1sen!2sjp" 
+            width="100%" 
+            height="100%" 
+            style="border:0; min-height: 380px; border-radius: 12px;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Pop-up -->
+  <div id="spotModal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-img-container">
+        <img id="modalImg" src="" alt="Spot Detail Photo">
+      </div>
+      <div class="modal-text">
+        <h3 id="modalTitle"></h3>
+        <p class="modal-meta" id="modalMeta"></p>
+        <p class="modal-desc" id="modalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" title="Top">&#8593;</button>
+ <script>
+    let currentLang = 'ja';
+
+    const langJaBtn = document.getElementById('langJa');
+    const langEnBtn = document.getElementById('langEn');
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      if (lang === 'ja') {
+        langJaBtn.classList.add('active');
+        langEnBtn.classList.remove('active');
+      } else {
+        langEnBtn.classList.add('active');
+        langJaBtn.classList.remove('active');
+      }
+
+      document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + lang);
+      });
+    }
+
+    langJaBtn.addEventListener('click', () => setLanguage('ja'));
+    langEnBtn.addEventListener('click', () => setLanguage('en'));
+
+    // Modal
+    const modal = document.getElementById('spotModal');
+    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalMeta = document.getElementById('modalMeta');
+    const modalClose = document.getElementById('modalClose');
+    const modalOverlay = document.querySelector('.modal-overlay');
+
+    document.querySelectorAll('.spot-clickable').forEach(card => {
+      card.addEventListener('click', () => {
+        modalImg.src = card.getAttribute('data-img');
+        modalTitle.textContent = card.getAttribute('data-title-' + currentLang);
+        modalDesc.textContent = card.getAttribute('data-desc-' + currentLang);
+        modalMeta.textContent = card.getAttribute('data-meta-' + currentLang);
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalOverlay.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        closeModal();
+      }
+    });
+
+    // Back to Top
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+  <section>
     <style>
         :root {
             --primary: #0056b3;
@@ -25,15 +378,6 @@
             max-width: 900px;
             margin: 30px auto;
             padding: 20px;
-        }
-        header {
-            text-align: center;
-            background: linear-gradient(135deg, #0056b3, #0099ff);
-            color: white;
-            padding: 40px 20px;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         header h1 {
             margin: 0 0 10px 0;
@@ -276,4 +620,8 @@
     </div>
 
 </body>
+</html>
+  </section>
+  </body>
+  
 </html>
